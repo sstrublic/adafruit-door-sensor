@@ -314,6 +314,8 @@ void loop()
             /* If the retry count is exceeded, blink the red LEDs. */
             if (door_control.retries >= POLL_RETRY_COUNT)
             {
+                s_printf("*** Door sensor is not responding!!! ***\r\n");
+
                 digitalWrite(door_control.door1.pin_open, HIGH);
                 digitalWrite(door_control.door2.pin_open, HIGH);
 
