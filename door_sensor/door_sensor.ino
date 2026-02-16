@@ -203,8 +203,12 @@ void loop()
         if ((door1 != door_control.door1.state) || (door2 != door_control.door2.state) ||
             (false == door_control.acked))
         {
-            s_printf("Door status changed!\r\n");
-
+#if DEBUG            
+            if (true == door_control.acked)
+            {
+                s_printf("Door status changed!\r\n");
+            }
+#endif
             /* Send status to the listener. */
             send_door_status(door1, door2);
         }
@@ -245,12 +249,8 @@ void loop()
                     {
                         s_printf("Received poll request...\r\n");
 
-                        /* Get the pin states. */
-                        uint8_t door1 = digitalRead(PIN_DOOR1_OPEN) | (digitalRead(PIN_DOOR1_CLOSED) << 4);
-                        uint8_t door2 = digitalRead(PIN_DOOR2_OPEN) | (digitalRead(PIN_DOOR2_CLOSED) << 4);
-
-                        /* Send status to the listener. */
-                        send_door_status(door1, door2);
+                        /* Setting the ack to false allows the next loop to send the response. */
+                        door_control.acked = false;
 
                         /* Since a request was processed, set when to check again. */
                         door_control.next_poll = now + STATUS_POLL_MILLISECONDS;
