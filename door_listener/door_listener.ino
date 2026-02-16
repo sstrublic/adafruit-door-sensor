@@ -1,6 +1,7 @@
 #include <SPI.h>
 #include <RH_RF95.h>
-#include "door_sensor.h"
+
+#include "door_listener.h"
 
 /* Set to 1 to enable serial debug. */
 #define DEBUG 1

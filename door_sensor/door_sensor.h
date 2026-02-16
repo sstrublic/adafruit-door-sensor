@@ -2,6 +2,7 @@
 #define __DOOR_SENSOR_H__
 
 #include <stdint.h>
+#include <stdarg.h>
 
 #define DEBUG 1
 

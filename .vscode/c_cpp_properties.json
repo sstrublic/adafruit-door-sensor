@@ -14,9 +14,14 @@
         {
             "name": "Arduino",
             "includePath": [
-                "${workspaceFolder}/**",
-                "c:/workspace/steve/arduino/libraries",
-                "c:/worksapce/steve/arduino/libraries/RadioHead"
+                "${workspaceFolder}\\**",
+                "C:\\workspace\\steve\\arduino\\libraries\\RadioHead",
+                "C:\\Users\\steve\\AppData\\Local\\Arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\arm-none-eabi\\include",
+                "C:\\Users\\steve\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.17\\libraries\\SPI",
+                "C:\\Users\\steve\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.17\\cores\\arduino",
+                "C:\\Users\\steve\\AppData\\Local\\Arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\lib\\gcc\\arm-none-eabi\\9.2.1\\include",
+                "C:\\Users\\steve\\AppData\\Local\\Arduino15\\packages\\adafruit\\tools\\CMSIS-Atmel\\1.2.2\\CMSIS\\Device\\ATMEL",
+                "C:\\Users\\steve\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.17\\variants\\feather_m0"
             ],
             "defines": [
                 "_DEBUG",

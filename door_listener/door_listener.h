@@ -1,7 +1,8 @@
-#ifndef __DOOR_SENSOR_H__
-#define __DOOR_SENSOR_H__
+#ifndef __DOOR_LISTENER_H__
+#define __DOOR_LISTENER_H__
 
 #include <stdint.h>
+#include <stdarg.h>
 
 /* Pin definitions. */
 #define RFM95_CS            8
@@ -81,4 +82,4 @@ typedef struct door_state_message
 
 } door_state_message_t;
 
-#endif // __DOOR_SENSOR_H__
+#endif // __DOOR_LISTENER_H__
