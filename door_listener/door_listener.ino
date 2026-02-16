@@ -6,6 +6,9 @@
 /* Set to 1 to enable serial debug. */
 #define DEBUG 1
 
+/* Sets the transmit power. */
+#define TX_POWER_SETTING            13
+
 /* Pins for LED selection (Active low) */
 #define PIN_DOOR1_CLOSED            14    // Door 1 closed - RA0
 #define PIN_DOOR1_OPEN              15    // Door 1 open - RA1
@@ -179,7 +182,7 @@ void setup()
      * If you are using RFM95/96/97/98 modules which uses the PA_BOOST transmitter pin, then
      * you can set transmitter powers from 5 to 23 dBm:
      */
-    rf95.setTxPower(23, false);
+    rf95.setTxPower(TX_POWER_SETTING, false);
 
     /* Set next poll time to 'now' to kick off requesting state from the sensor. */
     door_control.next_poll = millis();
