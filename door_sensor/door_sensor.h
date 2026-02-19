@@ -4,8 +4,6 @@
 #include <stdint.h>
 #include <stdarg.h>
 
-#define DEBUG 1
-
 /* Pin definitions. */
 #define RFM95_CS            8
 #define RFM95_INT           3

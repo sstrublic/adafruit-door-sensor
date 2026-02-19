@@ -11,7 +11,7 @@
 #include "door_sensor.h"
 
 /* Set to 1 to enable serial debug. */
-#define DEBUG 1
+#define DEBUG 0
 
 /* Sets the transmit power. */
 #define TX_POWER_SETTING            13
@@ -51,7 +51,7 @@ static void s_printf(const char *format, ...)
     Serial.print(buffer);
 }
 #else
-#define s_printf(format, args)
+#define s_printf(format, ...)
 #endif
 
 /**
